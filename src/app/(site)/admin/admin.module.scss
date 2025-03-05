@@ -1,0 +1,50 @@
+.adminPageWrapper {
+  background: #f2f2f2 !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  padding: 2rem !important;
+}
+
+.adminPageTile {
+  width: 800px !important;
+  padding: 3rem !important;
+  background: #ffffff !important;
+  border-radius: 8px !important;
+  border-top: 8px solid #2e7d32 !important;
+  border-bottom: 8px solid #2e7d32 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+
+  .MuiTypography-h4 {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.tableContainer {
+  margin-top: 1.5rem !important;
+  overflow-x: auto !important;
+  width: 100% !important;
+}
+
+.muiTable {
+  .MuiTableCell-root {
+    font-size: 0.95rem !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  .MuiTableRow-root:hover {
+    background-color: #fafafa !important;
+  }
+
+  .MuiButton-root {
+    font-weight: 600 !important;
+    text-transform: none !important;
+    border-radius: 4px !important;
+  }
+}

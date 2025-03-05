@@ -1,0 +1,53 @@
+.adminDetailWrapper {
+  background: #f2f2f2 !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  padding: 2rem !important;
+}
+
+.adminDetailTile {
+  width: 600px !important;
+  padding: 3rem !important;
+  background: #ffffff !important;
+  border-radius: 8px !important;
+  border-top: 8px solid #2e7d32 !important;
+  border-bottom: 8px solid #2e7d32 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+
+  .MuiTypography-h4 {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .MuiTextField-root {
+    .MuiOutlinedInput-root {
+      font-size: 1rem !important;
+      min-height: 3.6rem !important;
+      .MuiOutlinedInput-input {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+      }
+    }
+    .MuiInputLabel-root {
+      font-size: 0.95rem !important;
+    }
+  }
+
+  .MuiButton-root {
+    font-weight: 600 !important;
+    text-transform: none !important;
+    border-radius: 4px !important;
+  }
+}
+
+.loadingText {
+  font-size: 1.5rem !important;
+  margin: auto !important;
+  color: #666 !important;
+}
