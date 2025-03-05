@@ -22,13 +22,15 @@ export default function LoginPage() {
   const handleLogin = async () => {
     try {
       setServerError("");
-      const response = await axios.post("/auth/login", {
-        email,
-        password,
-      });
-      const { accessToken } = response.data;
+      const response = await axios.post("/auth/login", { email, password });
+      const { accessToken, role } = response.data;
       localStorage.setItem("token", accessToken);
-      router.push("/dashboard");
+
+      if (role === "ROLE_ADMIN") {
+        router.push("/admin");
+      } else {
+        router.push("/dashboard");
+      }
     } catch (err: any) {
       if (err.response && err.response.data) {
         setServerError(err.response.data.message || "Ошибка при входе");
@@ -49,14 +51,7 @@ export default function LoginPage() {
             {serverError}
           </Alert>
         )}
-        <Box
-          display="flex"
-          flexDirection="column"
-          gap={2}
-          mt={2}
-          width="100%"
-        
-        >
+        <Box display="flex" flexDirection="column" gap={2} mt={2} width="100%">
           <TextField
             label="Email"
             type="email"
